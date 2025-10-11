@@ -30,6 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
+import edu.umd.cs.findbugs.annotations.Nullable;
 import jenkins.scm.impl.UncategorizedSCMHeadCategory;
 import org.jvnet.localizer.Localizable;
 
@@ -188,5 +190,10 @@ public abstract class SCMHeadCategory extends SCMCategory<SCMHead> {
     @Override
     protected Localizable defaultDisplayName() {
         return Messages._SCMHeadCategory_DisplayName();
+    }
+
+    @Nullable
+    public String getIconFileName() {
+        return null;
     }
 }
